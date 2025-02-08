@@ -10,7 +10,6 @@ const Home = ({ quizzes, setQuizData }: HomeProps) => {
   const handleSelectedQuiz = (quiz: Quiz) => {
     setQuizData(quiz);
   };
-
   return (
     <main className="mx-auto mt-8 px-6 text-xl sm:px-16 xl:flex xl:w-full xl:items-start xl:px-0">
       <section className="flex flex-col gap-4 xl:w-1/2">

@@ -6,7 +6,7 @@ import data from "../data.json";
 import { Quizzes, Quiz } from "../types";
 import QuizPage from "./components/QuizPage";
 
-function App() {
+const App = () => {
   const quizzes: Quizzes = data.quizzes;
   const [quizData, setQuizData] = useState<Quiz>({
     title: "",
@@ -14,8 +14,9 @@ function App() {
     iconbg: "",
     questions: [],
   });
+
   const [themeMode, setThemeMode] = useState<"light" | "dark">(
-    () => (localStorage.getItem("themeMode") as "light" | "dark") || "light",
+    () => (localStorage.getItem("themeMode") as "light" | "dark") || "dark",
   );
 
   useEffect(() => {
@@ -51,6 +52,6 @@ function App() {
       </Routes>
     </>
   );
-}
+};
 
 export default App;
